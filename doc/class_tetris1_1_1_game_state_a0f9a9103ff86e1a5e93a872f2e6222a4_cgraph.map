@@ -1,0 +1,7 @@
+<map id="Tetris1.GameState.RotateBlockClockWise" name="Tetris1.GameState.RotateBlockClockWise">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,178,69"/>
+<area shape="rect" id="Node000002" href="$class_tetris1_1_1_block.html#a0c71f914489960f84b998da3dfeaba4f" title=" " alt="" coords="226,5,428,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,35,210,30,211,36,178,40"/>
+<area shape="rect" id="Node000003" href="$class_tetris1_1_1_block.html#ae0e1fe3e699a0e6b9f1e7cb6c96d0b06" title=" " alt="" coords="233,56,421,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,56,218,61,218,66,178,61"/>
+</map>

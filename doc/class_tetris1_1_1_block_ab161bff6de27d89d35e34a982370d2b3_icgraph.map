@@ -1,0 +1,9 @@
+<map id="Tetris1.Block.Move" name="Tetris1.Block.Move">
+<area shape="rect" id="Node000001" title=" " alt="" coords="283,56,414,83"/>
+<area shape="rect" id="Node000002" href="$class_tetris1_1_1_game_state.html#a1c061294d237f5943cbf9f7f4e1ec63c" title=" " alt="" coords="5,5,235,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="271,55,234,47,183,35,184,30,235,41,272,50"/>
+<area shape="rect" id="Node000003" href="$class_tetris1_1_1_game_state.html#aa660c1c5dc4ac2da4ea6e1e348189f13" title=" " alt="" coords="27,56,213,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,72,213,72,213,67,268,67"/>
+<area shape="rect" id="Node000004" href="$class_tetris1_1_1_game_state.html#aea7634f6428f12e9045ac8d679e2d51f" title=" " alt="" coords="23,107,217,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="272,89,235,97,184,109,183,103,234,92,271,84"/>
+</map>

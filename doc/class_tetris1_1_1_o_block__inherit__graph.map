@@ -1,0 +1,5 @@
+<map id="Tetris1.OBlock" name="Tetris1.OBlock">
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,272,145,384"/>
+<area shape="rect" id="Node000002" href="$class_tetris1_1_1_block.html" title=" " alt="" coords="5,5,187,224"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,238,99,272,93,272,93,238"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Tetris1.App" name="Tetris1.App">
+<area shape="rect" id="Node000001" title="Interaction logic for App.xaml." alt="" coords="5,123,84,192"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="6,5,83,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,89,47,123,42,123,42,89"/>
+</map>

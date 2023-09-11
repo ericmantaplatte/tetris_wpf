@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="dings\Background.png" />
+    <None Remove="dings\Block-Empty.png" />
+    <None Remove="dings\Block-I.png" />
+    <None Remove="dings\Block-J.png" />
+    <None Remove="dings\Block-L.png" />
+    <None Remove="dings\Block-O.png" />
+    <None Remove="dings\Block-S.png" />
+    <None Remove="dings\Block-T.png" />
+    <None Remove="dings\Block-Z.png" />
+    <None Remove="dings\Icon.ico" />
+    <None Remove="dings\TileBlue.png" />
+    <None Remove="dings\TileCyan.png" />
+    <None Remove="dings\TileEmpty.png" />
+    <None Remove="dings\TileGreen.png" />
+    <None Remove="dings\TileOrange.png" />
+    <None Remove="dings\TilePurple.png" />
+    <None Remove="dings\TileRed.png" />
+    <None Remove="dings\TileYellow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="dings\Background.png" />
+    <Resource Include="dings\Block-Empty.png" />
+    <Resource Include="dings\Block-I.png" />
+    <Resource Include="dings\Block-J.png" />
+    <Resource Include="dings\Block-L.png" />
+    <Resource Include="dings\Block-O.png" />
+    <Resource Include="dings\Block-S.png" />
+    <Resource Include="dings\Block-T.png" />
+    <Resource Include="dings\Block-Z.png" />
+    <Resource Include="dings\Icon.ico" />
+    <Resource Include="dings\TileBlue.png" />
+    <Resource Include="dings\TileCyan.png" />
+    <Resource Include="dings\TileEmpty.png" />
+    <Resource Include="dings\TileGreen.png" />
+    <Resource Include="dings\TileOrange.png" />
+    <Resource Include="dings\TilePurple.png" />
+    <Resource Include="dings\TileRed.png" />
+    <Resource Include="dings\TileYellow.png" />
+  </ItemGroup>
+
+</Project>

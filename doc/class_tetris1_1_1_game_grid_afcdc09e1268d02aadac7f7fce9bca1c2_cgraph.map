@@ -1,0 +1,9 @@
+<map id="Tetris1.GameGrid.ClearFullRows" name="Tetris1.GameGrid.ClearFullRows">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,216,83"/>
+<area shape="rect" id="Node000002" href="$class_tetris1_1_1_game_grid.html#ab6c934167f32b295b23724b94d4162cc" title=" " alt="" coords="280,5,462,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,53,284,33,285,38,183,58"/>
+<area shape="rect" id="Node000003" href="$class_tetris1_1_1_game_grid.html#a0a0c011366a8c878a430d6589c9d6463" title=" " alt="" coords="279,56,463,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,67,264,67,264,72,216,72"/>
+<area shape="rect" id="Node000004" href="$class_tetris1_1_1_game_grid.html#a0a6395cd73806d97c1ea4e1a0faf66b1" title=" " alt="" coords="264,107,478,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,81,285,101,284,106,182,86"/>
+</map>

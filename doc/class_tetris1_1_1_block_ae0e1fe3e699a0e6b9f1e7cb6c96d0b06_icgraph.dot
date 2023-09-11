@@ -1,0 +1,13 @@
+digraph "Tetris1.Block.RotatteCounterClockWise"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="Tetris1.Block.RotatteCounter\lClockWise",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Tetris1.GameState.Rotate\lBlockClockWise",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_tetris1_1_1_game_state.html#a0f9a9103ff86e1a5e93a872f2e6222a4",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Tetris1.GameState.Rotate\lBlockCounterClockWise",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_tetris1_1_1_game_state.html#a58d472f4a79460b0089bef2b273ef1ac",tooltip=" "];
+}

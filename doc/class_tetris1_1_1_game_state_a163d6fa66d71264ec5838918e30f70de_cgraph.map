@@ -1,0 +1,5 @@
+<map id="Tetris1.GameState.GameState" name="Tetris1.GameState.GameState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,206,40"/>
+<area shape="rect" id="Node000002" href="$class_tetris1_1_1_block_queue.html#a7c4323676e9fc8cfffa12b4dc1522503" title=" " alt="" coords="254,5,437,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,24,239,24,239,29,206,29"/>
+</map>
