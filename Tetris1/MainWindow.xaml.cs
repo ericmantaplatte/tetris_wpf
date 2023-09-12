@@ -76,6 +76,7 @@ namespace Tetris1
                 for (int c = 0; c < grid.Columns; c++)
                 {
                     int id = grid[r, c];
+                    imageControls[r, c].Opacity = 1; //Needed to Reset from Preview
                     imageControls[r, c].Source = tileImages[id];
                 }
             }
@@ -103,11 +104,32 @@ namespace Tetris1
             GameOverScreen.Visibility = Visibility.Visible;
         }
 
+        private void DrawHeldBlock(Block heldblock)
+        {
+            if (heldblock == null)
+                HoldImage.Source = blockImages[0];
+            else
+                HoldImage.Source = blockImages[heldblock.Id];
+        }
+
+        private void DrawDropPreview(Block b)
+        {
+            int dropDistance = gameState.BlockDropDistance();
+            foreach (BlockPosition bp in b.TilePositions())
+            {
+                imageControls[bp.Row + dropDistance, bp.Column].Opacity = 0.33;
+                imageControls[bp.Row + dropDistance, bp.Column].Source = tileImages[b.Id];
+            }
+        }
+
+        //Draws Grid, Block, Queue, Held Block and Preview
         private void Draw(GameState gameState)
         {
             DrawGrid(gameState.GameGrid);
             DrawBlock(gameState.CurrentBlock);
             DrawNextBlock(gameState.Queue);
+            DrawHeldBlock(gameState.HeldBlock);
+            DrawDropPreview(gameState.CurrentBlock);
             ScoreTx.Text = gameState.Score.ToString();
         }
 
@@ -116,6 +138,8 @@ namespace Tetris1
             Block next = bq.NextBlock;
             NextBlockImage.Source = blockImages[next.Id];
         }
+
+        //EventHandler for Key Inputs
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (gameState.GameOver)
@@ -134,16 +158,25 @@ namespace Tetris1
                     gameState.MoveRight(); break;
                 case Key.Left:
                     gameState.MoveLeft(); break;
+                case Key.Enter:
+                    gameState.HoldBlock(); break;
+                case Key.Space:
+                    gameState.DropBlock(); break;
                 default: return;
             }
             Draw(gameState);
         }
 
+
+        //waits for the game to load and starts the game loop
         private async void GameCanvas_Loaded(object sender, RoutedEventArgs e)
         {
             await Update();
         }
 
+
+
+        //Creates a new Grid and waits for the game to start again
         private async void Retry_Click(object sender, RoutedEventArgs e)
         {
             gameState = new GameState();

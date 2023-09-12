@@ -23,6 +23,9 @@
             }
         }
 
+        public Block HeldBlock { get; private set; }
+        public bool CanHold { get; private set; }
+
         public GameGrid GameGrid { get; set; }
         public BlockQueue Queue { get; set; }
         public bool GameOver { get; private set; }
@@ -34,6 +37,7 @@
             GameGrid = new GameGrid(22, 10);
             Queue = new BlockQueue();
             CurrentBlock = Queue.GetAndUpdate();
+            CanHold = true;
         }
 
 
@@ -89,14 +93,18 @@
             return !(GameGrid.isRowEmpty(0) && GameGrid.isRowEmpty(1)); //Returns true if first hidden 2 Rows are not empty
         }
 
+
+        //Increases Speed for every cleared row
         private void IncreaseSpeed(int clearedRows)
         {
             if (gameSpeed > 100)
-                gameSpeed = gameSpeed - (clearedRows * 25);
+                gameSpeed -= (clearedRows * 25);
             if (gameSpeed <= 100)
                 gameSpeed = 100;
         }
 
+
+        //Standard Tetris Score increase
         private void IncreaseScore(int clearedRows)
         {
             switch (clearedRows)
@@ -130,6 +138,7 @@
             else
             {
                 CurrentBlock = Queue.GetAndUpdate();
+                CanHold = true;
             }
         }
 
@@ -149,5 +158,62 @@
             IncreaseScore(clearedRows);
         }
 
+
+        /*
+         * Checks if you can hold a block stops method if no
+         * if you are not holding a block, hold current block
+         * if you are holding a block, swaps current block with current block
+         */
+        public void HoldBlock()
+        {
+            if (!CanHold)
+            {
+                return;
+            }
+
+
+            if (HeldBlock == null)
+            {
+                HeldBlock = CurrentBlock;
+                CurrentBlock = Queue.GetAndUpdate();
+            }
+            else
+            {
+                Block tempBlock = CurrentBlock;
+                CurrentBlock = HeldBlock;
+                HeldBlock = tempBlock;
+            }
+            CanHold = false;
+        }
+
+
+        //Calculates the distance the tiles can drop
+        private int TileDropDistance(BlockPosition bp)
+        {
+            int drop = 0;
+            while (GameGrid.IsEmpty(bp.Row + drop + 1, bp.Column))
+                drop++;
+
+            return drop;
+        }
+
+
+        //Calculates the lower value of grid rows and tiledropdistance
+        public int BlockDropDistance()
+        {
+            int drop = GameGrid.Rows;
+            foreach (BlockPosition bp in CurrentBlock.TilePositions())
+                drop = System.Math.Min(drop, TileDropDistance(bp));
+
+            return drop;
+        }
+
+
+        //Method to instantly drop and place the block
+        public void DropBlock()
+        {
+            CurrentBlock.Move(BlockDropDistance(), 0);
+            PlaceBlock();
+        }
     }
 }

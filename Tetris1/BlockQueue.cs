@@ -19,7 +19,7 @@ namespace Tetris1
         };
 
         private readonly Random rdm = new();
-        public Block NextBlock { get; private set; }
+        public Block NextBlock { get; set; }
 
         public BlockQueue()
         {

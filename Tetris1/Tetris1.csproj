@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>dings\tetris.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,6 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="dings\tetris.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="dings\Background.png" />
     <Resource Include="dings\Block-Empty.png" />
     <Resource Include="dings\Block-I.png" />
@@ -38,7 +43,6 @@
     <Resource Include="dings\Block-S.png" />
     <Resource Include="dings\Block-T.png" />
     <Resource Include="dings\Block-Z.png" />
-    <Resource Include="dings\Icon.ico" />
     <Resource Include="dings\TileBlue.png" />
     <Resource Include="dings\TileCyan.png" />
     <Resource Include="dings\TileEmpty.png" />
